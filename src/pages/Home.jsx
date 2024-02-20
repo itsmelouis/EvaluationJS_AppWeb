@@ -1,7 +1,13 @@
+import Book from "../components/Book";
+import { BookProvider } from "../context/BookContext";
+
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-bold font-3xl">Home</h1>
+    <div className="flex flex-col justify-center mt-20">
+      <BookProvider >
+        <h1 className="text-center font-bold text-3xl mb-3">Accueil</h1>
+        <Book />
+      </BookProvider>
     </div>
   )
 }
